@@ -9,17 +9,20 @@ package cis285lab10;
 import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
+
 public class testSelectionSort {
 	@Test
 	public void test() {
-		//testPositive();
-		//testNegative();
-	testMixed();
-	testDuplicates();
+		testPositive();
+		testNegative();
+		testMixed();
+		testDuplicates();
 	}
+
 	public testSelectionSort() {
 	}
-	public void testPositive(){
+
+	public void testPositive() {
 		int[] arr = new int[5];
 		arr[0] = 8;
 		arr[1] = 9;
@@ -32,12 +35,13 @@ public class testSelectionSort {
 		Sortedarr[2] = 8;
 		Sortedarr[3] = 9;
 		Sortedarr[4] = 10;
-		SelectionSort temp1=new SelectionSort();
-		arr=temp1.basicSelectionSort(arr);
-		assertArrayEquals(Sortedarr,arr);
+		SelectionSort temp1 = new SelectionSort();
+		arr = temp1.basicSelectionSort(arr);
+		assertArrayEquals(Sortedarr, arr);
 	}
-	public void testNegative(){
-		
+
+	public void testNegative() {
+
 		int[] arr = new int[5];
 		arr[0] = -8;
 		arr[1] = -9;
@@ -50,11 +54,12 @@ public class testSelectionSort {
 		Sortedarr[2] = -8;
 		Sortedarr[3] = -7;
 		Sortedarr[4] = -2;
-		SelectionSort temp1=new SelectionSort();
-		arr=temp1.basicSelectionSort(arr);
+		SelectionSort temp1 = new SelectionSort();
+		arr = temp1.basicSelectionSort(arr);
 		assertArrayEquals(Sortedarr, arr);
 	}
-	public void testMixed(){
+
+	public void testMixed() {
 		int[] arr = new int[5];
 		arr[0] = 8;
 		arr[1] = -9;
@@ -67,11 +72,12 @@ public class testSelectionSort {
 		Sortedarr[2] = 2;
 		Sortedarr[3] = 7;
 		Sortedarr[4] = 8;
-		SelectionSort temp1=new SelectionSort();
-		arr=temp1.basicSelectionSort(arr);
-		assertArrayEquals(Sortedarr,arr);
+		SelectionSort temp1 = new SelectionSort();
+		arr = temp1.basicSelectionSort(arr);
+		assertArrayEquals(Sortedarr, arr);
 	}
-	public void testDuplicates(){
+
+	public void testDuplicates() {
 		int[] arr = new int[5];
 		arr[0] = -9;
 		arr[1] = -9;
@@ -84,8 +90,8 @@ public class testSelectionSort {
 		Sortedarr[2] = -9;
 		Sortedarr[3] = -2;
 		Sortedarr[4] = 7;
-		SelectionSort temp1=new SelectionSort();
-		arr=temp1.basicSelectionSort(arr);
-		assertArrayEquals(Sortedarr,arr);
-}
+		SelectionSort temp1 = new SelectionSort();
+		arr = temp1.basicSelectionSort(arr);
+		assertArrayEquals(Sortedarr, arr);
+	}
 }
